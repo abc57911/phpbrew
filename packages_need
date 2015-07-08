@@ -1,0 +1,17 @@
+php nginx mysql 
+php5      install
+php5-cli     install
+php5-common     install
+php5-curl     install
+php5-fpm     install
+php5-gd      install
+php5-gearman     install
+php5-json     install
+php5-mcrypt     install
+php5-memcache     install
+php5-memcached     install
+php5-mysql     install
+php5-redis     install
+gearman、memcached(docker dont need)、redis-server、composer
+
+--

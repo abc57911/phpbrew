@@ -1,0 +1,29 @@
+
+ADD in ~/.bashrc:
+	source /opt/phpbrew/bashrc
+	export PHPBREW_SET_PROMPT=1
+	export EDITOR=vim
+	export PHPBREW_ROOT=/opt/phpbrew
+	export PHPBREW_HOME=/opt/phpbrew
+
+-------------
+Some error of installation:
+	#freetype2 library not found
+		ln -s /usr/include/freetype2 /usr/include/freetype2/freetype
+
+	#ft2buil.h library not found
+		ln -s /usr/include/freetype2/ft2build.h /usr/include/ft2build.h
+-------------------
+PHPBrew Variants:
+	###phpbrew -d install 5.3.29 +openssl +cli +curl +fpm +gd +json +mcrypt +mysql
+	phpbrew -d install 5.3.29 +default
+
+------
+Extension:
+	json, curl >> redis, gearman, memcache, memcached
+	
+	#install for gd extension after php<version> installed
+		phpbrew -d ext install gd -- --with-freetype-dir=/usr/include
+-----
+Requirement Library:
+	libmemcached-dev, libgearman-dev,
