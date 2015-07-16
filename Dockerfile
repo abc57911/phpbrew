@@ -48,9 +48,7 @@ source /home/bb/.phpbrew/init && \
 source /home/bb/.bashrc && \
 phpbrew switch 5.3.29 && \
 phpbrew -d ext install gd && \
-buildslave create-slave /home/bb master php5.3 slave
 WORKDIR /home/bb
 ADD start.sh /home/bb/start.sh
 RUN sudo chmod 777 /home/bb/start.sh
-#ENTRYPOINT ["buildslave", "start", "--nodaemon", "/home/bb"]
 CMD ["/home/bb/start.sh"]
